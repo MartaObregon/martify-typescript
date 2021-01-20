@@ -1,12 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import  {GlobalTheme} from "./styles/theme"
+
+
+
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    background: ${GlobalTheme.colors.blackGradient};
+    color: ${GlobalTheme.colors.white};
+    font-family: 'circular-std', sans-serif;
+    margin:0 auto;
+    
+  }
+`
+
+
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+        <GlobalStyle/>
+        <App/>
+          
+        
+        
+      
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
