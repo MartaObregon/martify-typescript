@@ -6,6 +6,8 @@ import { GlobalTheme } from '../../styles/theme';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
 import VideoLibraryRoundedIcon from '@material-ui/icons/VideoLibraryRounded';
+import { OverridableTypeMap } from '@material-ui/core/OverridableComponent';
+
 
 const SidebarContainer = styled.div`
   background: ${GlobalTheme.colors.grey};
@@ -13,15 +15,18 @@ const SidebarContainer = styled.div`
   top:0;
   left: 0;
   width: 224px;
-  height:100%
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  
 
   
 `;
 
-
 const Logo = styled.img`
   max-width:150px;
-  height:44px
+  object-fit: contain;
+  margin: 20px 30px;
 `;
 
 
@@ -29,33 +34,50 @@ const Menu = styled.div`
   margin-left:10px;
 `;
 
-const MenuOption = styled.div`
+
+
+const Option = styled.div`
+  
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: center;
+  align-items:center;
+  padding-left:10px;
+  color: gray;
+  :hover {
+      color: white;
+      border-left: 4px solid #66D36E;
+    }
 `;
 
 
+const MenuOptions = styled.div`
+  position: absolute;
+  left:0;
+
+  }
+`;
+
+const styledMenuTitles = {marginLeft:'15px'}
 
 
-function Sidebar() {
+const Sidebar= () =>{
     return (
         <SidebarContainer>
             <Logo alt="" src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png"/>
             <Menu>
-               <MenuOption>
-                   <h3>Home</h3>
-                   <HomeRoundedIcon/>
-               </MenuOption>
-               <MenuOption>
-                   <h3>Explore</h3>
-                   <SearchRoundedIcon/>
-               </MenuOption>
-               <MenuOption>
-                   <h3>Library</h3>
-                   <VideoLibraryRoundedIcon/>
-               </MenuOption>
+               <MenuOptions>
+                  <Option>
+                      <HomeRoundedIcon/>
+                      <h3 style={styledMenuTitles}>Home</h3>
+                  </Option>
+                  <Option>
+                      <SearchRoundedIcon/>
+                      <h3 style={styledMenuTitles}>Search</h3>
+                  </Option>
+                  <Option>
+                      <VideoLibraryRoundedIcon/>
+                      <h3 style={styledMenuTitles}>Library</h3>
+                  </Option>
+               </MenuOptions>
             </Menu>
             {/* playlists */}
         </SidebarContainer>
