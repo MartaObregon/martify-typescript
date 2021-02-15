@@ -15,12 +15,16 @@ const SidebarContainer = styled.div`
   position: fixed;
   top:0;
   left: 0;
-  width: 25%;
+  height:100%;
   max-width:225px;
   display:flex;
   flex-direction: column;
+
+  margin-bottom:100px;
+
   
-  height:100vh;
+  
+  
  
 
   
@@ -43,7 +47,7 @@ const Option = styled.div`
   color: gray;
   line-height: ${GlobalTheme.font.sidebarLineHeight};
   cursor: pointer;
-  padding-left: 10px;
+  padding-left: 20px;
   
   :hover {
       color: white;
@@ -64,11 +68,10 @@ const MenuTitle = styled.h3`
 ` 
 
 const PlaylistContainer = styled.div`
-  height: 100vh;
-  margin-left:10px;
- 
   
+  margin-left:20px;
   
+
 `;
 
 const PlaylistTitle = styled.h3`
@@ -94,13 +97,20 @@ const ListPlaylists = styled.div`
   
   display:flex;
   flex-direction:column;
-  justify-content: space-evenly;
-  height:100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  ::-webkit-scrollbar{
-    display:none;
-  }
+  margin:auto;
+  max-height:400px;
+  
+  line-height: ${GlobalTheme.font.sidebarLineHeight};
+  
+  overflow-y:scroll;
+  overflow-x:hidden;
+
+  
+  
+ ::-webkit-scrollbar{
+   display:none;
+ }
+  
  
 `;
 
@@ -108,7 +118,7 @@ const OnePlaylist = styled.div`
   font-size: ${GlobalTheme.font.mediumFont};
   font-weight:500;
   opacity:0.5;
-  line-height: ${GlobalTheme.font.sidebarLineHeight};
+  
   cursor:pointer;
 
   :hover{
@@ -120,6 +130,12 @@ const OnePlaylist = styled.div`
 
 
 const Sidebar= () =>{
+
+  const truncate = (str: string, n:number):string =>{
+    return str?.length > n ? str.substr(0, n -1) + "...": str
+  }
+
+
     return (
         <SidebarContainer>
             <Logo alt="" src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png"/>
@@ -144,47 +160,40 @@ const Sidebar= () =>{
                 <AddBoxIcon style={{color: GlobalTheme.colors.white, fontSize: 35}}/>
                 <h3 style={{
                   fontSize: GlobalTheme.font.mediumFont,
-                  fontWeight: 700
+                  fontWeight: 700,
+                  marginLeft:"7px"
                 }}>New Playlist</h3>
               </NewPlaylist>
 
               <ListPlaylists>
-                <OnePlaylist>1 Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>Rock Save the queen</OnePlaylist>
-                <OnePlaylist>9Rock Save the queen</OnePlaylist>
+                <OnePlaylist>{truncate('112312Rock save the queen and me', 10)}</OnePlaylist>
+                
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                <OnePlaylist>123{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                
+          
              
               </ListPlaylists>
             </PlaylistContainer>

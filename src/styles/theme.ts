@@ -12,7 +12,7 @@ export const GlobalTheme ={
                 mediumFont: "14px",
                 largeFont: "28px",
                 smallFont: "10px",
-                sidebarLineHeight: "17px", 
+                sidebarLineHeight: "30px", 
                 containerLineHeight: "15px"
 
         }

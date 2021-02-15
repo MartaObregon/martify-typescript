@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${GlobalTheme.colors.white};
     font-family: ${GlobalTheme.font.fontFamily}, sans-serif;
     margin:0 auto;
+    height:100%;
     
   }
 `
