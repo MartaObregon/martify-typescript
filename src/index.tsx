@@ -1,6 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-
+import React from 'react';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -14,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     background: ${GlobalTheme.colors.blackGradient};
     color: ${GlobalTheme.colors.white};
-    font-family: 'circular-std', sans-serif;
+    font-family: ${GlobalTheme.font.fontFamily}, sans-serif;
     margin:0 auto;
     
   }
@@ -27,11 +26,6 @@ ReactDOM.render(
   <React.StrictMode>
         <GlobalStyle/>
         <App/>
-          
-        
-        
-      
-    
   </React.StrictMode>,
   document.getElementById('root')
 );
