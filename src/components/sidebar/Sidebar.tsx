@@ -22,12 +22,6 @@ const SidebarContainer = styled.div`
 
   margin-bottom:100px;
 
-  
-  
-  
- 
-
-  
 `;
 
 const Logo = styled.img`
@@ -168,30 +162,8 @@ const Sidebar= () =>{
               <ListPlaylists>
                 <OnePlaylist>{truncate('112312Rock save the queen and me', 10)}</OnePlaylist>
                 
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>{truncate('Rock save the queen and me', 20)}</OnePlaylist>
-                <OnePlaylist>123{truncate('Rock save the queen and me', 20)}</OnePlaylist>
+                
+               
                 
           
              
