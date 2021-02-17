@@ -27,7 +27,7 @@ const PlayerSectionContainer = styled.div`
 const NowPlaying = styled.div`
     display: flex;
     align-items: center;
-    color: white;
+    color: white; 
     max-width: 300px;
     flex: 0.4;
 

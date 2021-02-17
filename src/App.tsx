@@ -11,7 +11,19 @@ const AppContainer = styled.div`
   height:100vh;
 `;
 
+export interface UserData {
+  name: string
+  email: string,
+  playlists: Array<Playlist>
+  myFavourites: Playlist
 
+}
+
+
+interface Playlist {
+  title: string;
+  list: string,
+}
 
 function App() {
   return (
